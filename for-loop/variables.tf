@@ -55,6 +55,8 @@ variable "instances" {
         redis = "t3.micro"
         rabbitmq = "t3.micro"
         mysql = "t3.small"
+
+        #default = ["mongodb","redis","rabbitmq","mysql"] #see other files for to keep this aas it is
     }
 }
 variable "Zone_id" {

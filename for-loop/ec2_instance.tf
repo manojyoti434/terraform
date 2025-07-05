@@ -1,7 +1,9 @@
 resource "aws_instance" "roboshop" {
   for_each = var.instances
+  #for_ech = toset(var.instances) #this is when you keep as list and use foreachloop
   ami           = var.ami_id   #right and left side names need not be same#
   instance_type =   each.value
+  #instance_type =   "t3.micro" this isnneded when you keep as list
   vpc_security_group_ids = [ aws_security_group.allow_all.id]
 
 
