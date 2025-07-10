@@ -9,5 +9,7 @@ terraform checks whether configuration existed is matching with requirement or n
 
 keeping state file in local will not work in collabarative environment, terraform will not understand what resources got created already, it may lead to duplicate resources created and mess up, to avoid this we need some central location to maintain .tfstate file, so it get locked while one person is doing some configuration on prvider, so when second person try to run terra cmds, they will be able to do  post one person completed  and all config will be compared with all persons done configs , so we can avoid duplicate infra creation
 
+we can enable statefile lock , will discuss further, to get work done use state file by multiple members
+
  -->
 
